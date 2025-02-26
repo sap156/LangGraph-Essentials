@@ -35,7 +35,9 @@ first_responder_prompt_template = actor_prompt_template.partial(
 
 llm = ChatOpenAI(model="gpt-4o")
 
-first_responder_chain = first_responder_prompt_template | llm.bind_tools(tools=[AnswerQuestion], tool_choice='AnswerQuestion') | pydantic_parser
+first_responder_chain = first_responder_prompt_template | llm.bind_tools(tools=[AnswerQuestion], tool_choice='AnswerQuestion') 
+
+validator = PydanticToolsParser(tools=[AnswerQuestion])
 
 # Revisor section
 
@@ -51,13 +53,6 @@ revise_instructions = """Revise your previous answer using the new information.
 revisor_chain = actor_prompt_template.partial(
     first_instruction=revise_instructions
 ) | llm.bind_tools(tools=[ReviseAnswer], tool_choice="ReviseAnswer")
-
-response = first_responder_chain.invoke({
-    "messages": [HumanMessage(content="Write me a blog post on how small business can leverage AI to grow")]
-})
-
-
-print(response)
 
 
 
