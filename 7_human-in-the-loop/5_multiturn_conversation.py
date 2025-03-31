@@ -14,7 +14,7 @@ class State(TypedDict):
     human_feedback: Annotated[List[str], add_messages]
 
 def model(state: State): 
-    """ Here, we're using the LLM to generate a LinkedIn post based on a research topic with human feedback incorporated """
+    """ Here, we're using the LLM to generate a LinkedIn post with human feedback incorporated """
 
     print("[model] Generating content")
     linkedin_topic = state["linkedin_topic"]
@@ -93,8 +93,6 @@ graph.add_node("end_node", end_node)
 
 graph.add_edge(START, "model")
 graph.add_edge("model", "human_node")
-graph.add_edge("human_node", "model") # Loop back unless "done"
-graph.add_edge("human_node", "end_node")  #Exit if "done"
 
 graph.set_finish_point("end_node")
 
@@ -106,7 +104,7 @@ thread_config = {"configurable": {
     "thread_id": uuid.uuid4()
 }}
 
-linkedin_topic = input("Enter your LinkedIn topic")
+linkedin_topic = input("Enter your LinkedIn topic: ")
 initial_state = {
     "linkedin_topic": linkedin_topic, 
     "generated_post": [], 
