@@ -88,6 +88,7 @@ graph.add_node("model", model)
 graph.add_node("human_node", human_node)
 graph.add_node("end_node", end_node)
 
+graph.set_entry_point("model")
 
 # Define the flow
 

@@ -54,6 +54,9 @@ revisor_chain = actor_prompt_template.partial(
     first_instruction=revise_instructions
 ) | llm.bind_tools(tools=[ReviseAnswer], tool_choice="ReviseAnswer")
 
+# response = first_responder_chain.invoke({
+#     "messages": [HumanMessage("AI Agents taking over content creation")]
+# })s
 
-
+# print(response)
 
