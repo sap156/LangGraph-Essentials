@@ -67,9 +67,9 @@ test_state = [
 ]
 
 # Execute the tools
-results = execute_tools(test_state)
+# results = execute_tools(test_state)
 
-print("Raw results:", results)
-if results:
-    parsed_content = json.loads(results[0].content)
-    print("Parsed content:", parsed_content)
+# print("Raw results:", results)
+# if results:
+#     parsed_content = json.loads(results[0].content)
+#     print("Parsed content:", parsed_content)
