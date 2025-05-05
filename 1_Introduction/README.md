@@ -71,7 +71,7 @@ This will:
 
 ## Output
 
-![ReAct Agent Output](/Users/sap156/Documents/MyDevelopment/GenAI/langgraph/images/react_agent_basic.png)
+![ReAct Agent Output](images/react_agent_basic.png)
 
 ## Features
 
