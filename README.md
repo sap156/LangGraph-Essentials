@@ -193,14 +193,6 @@ This folder focuses on streaming workflows and event handling.
 
 ---
 
-## `images`
-This folder contains images and visualizations used in the project.
-
-### Files:
-- **`react_agent_basic.png`**: Visualization of a basic reactive agent workflow.
-
----
-
 ## `requirements.txt`
 This file lists the dependencies required to run the project.
 
