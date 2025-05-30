@@ -2,7 +2,8 @@
 
 LangGraph is a powerful framework designed to build state-driven workflows for AI applications. It extends the capabilities of traditional AI frameworks like LangChain by introducing state management, human-in-the-loop systems, and advanced workflow orchestration. Below, we explore what makes LangGraph unique, its advantages over LangChain, and the types of applications you can build with it.
 
----
+---<img width="1078" alt="Screenshot 2025-05-29 at 8 23 27 PM" src="https://github.com/user-attachments/assets/2ef59858-bdf4-423f-bc2c-91222ba92301" />
+
 
 ### Example of Traditional AI Frameworks and How LangGraph Solves Their Problems
 
